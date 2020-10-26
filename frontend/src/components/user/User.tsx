@@ -9,7 +9,7 @@ import Form from '../utils/form/Form'
 const headerProps = {
     icon: 'users',
     title: ' Usuarios',
-    sub: 'Cadastro de usuariosxxxx',
+    sub: 'Cadastro de usuarios',
 }
 
 
