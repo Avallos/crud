@@ -2,14 +2,12 @@ import React, {Component} from 'react'
 import Main from '../template/Main'
 import axios from 'axios'
 import UserModel from '../../models/UserModel'
-import { useForm } from 'react-hook-form'
-import Form from '../utils/form/Form'
 
 
 const headerProps = {
     icon: 'users',
     title: ' Usuarios',
-    sub: 'Cadastro de usuariosxxxx',
+    sub: 'Cadastro de usuarios',
 }
 
 
@@ -84,53 +82,53 @@ export default class User extends Component{
         
     }
 
-    renderForm() {
-        const { register, handleSubmit, errors } = useForm();
+    // renderForm() {
+    //     const { register, handleSubmit, errors } = useForm();
 
-        return (
+    //     return (
             
-            <div className="form">
-                <form onSubmit={handleSubmit(this.save)} noValidate>
-                    <div className="row">
-                        <div className="col-12 col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="Nome">Nome</label>
-                                <input type="text" className="form-control" name="name" value={this.state.user.name}
-                                onChange={e => this.updateNameField(e)} placeholder="Digite o nome..." 
-                                ref={register({
-                                    required: "Digite seu Nome"
-                                })}/>
-                                {errors.name && <span>{errors.name.message}</span>}
-                            </div> 
-                        </div>
+    //         <div className="form">
+    //             <form onSubmit={handleSubmit(this.save)} noValidate>
+    //                 <div className="row">
+    //                     <div className="col-12 col-md-6">
+    //                         <div className="form-group">
+    //                             <label htmlFor="Nome">Nome</label>
+    //                             <input type="text" className="form-control" name="name" value={this.state.user.name}
+    //                             onChange={e => this.updateNameField(e)} placeholder="Digite o nome..." 
+    //                             ref={register({
+    //                                 required: "Digite seu Nome"
+    //                             })}/>
+    //                             {errors.name && <span>{errors.name.message}</span>}
+    //                         </div> 
+    //                     </div>
 
-                        <div className="col-12 col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="Email">Email</label>
-                                <input type="text" className="form-control" name="email" value={this.state.user.email}
-                                onChange={e => this.updateEmailField(e)} placeholder="Digite o email..."
-                                ref={register({
-                                    required: "Insira seu E-mail",
-                                    pattern: {
-                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                        message: "Email Inválido"
-                                    },
-                                })}/>
-                                {errors.email && <span>{errors.email.message}</span>}
-                            </div> 
-                        </div>
-                        <hr/>
-                        <div className="row">
-                            <div className="col-12 d-flex justify-content-end">
-                                <button className="btn btn-primary ml-2" onClick={this.save}>Salvar</button>
-                                <button className="btn btn-secondary ml-2" onClick={this.clear}>Cancelar</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        )
-    }
+    //                     <div className="col-12 col-md-6">
+    //                         <div className="form-group">
+    //                             <label htmlFor="Email">Email</label>
+    //                             <input type="text" className="form-control" name="email" value={this.state.user.email}
+    //                             onChange={e => this.updateEmailField(e)} placeholder="Digite o email..."
+    //                             ref={register({
+    //                                 required: "Insira seu E-mail",
+    //                                 pattern: {
+    //                                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+    //                                     message: "Email Inválido"
+    //                                 },
+    //                             })}/>
+    //                             {errors.email && <span>{errors.email.message}</span>}
+    //                         </div> 
+    //                     </div>
+    //                     <hr/>
+    //                     <div className="row">
+    //                         <div className="col-12 d-flex justify-content-end">
+    //                             <button className="btn btn-primary ml-2" onClick={this.save}>Salvar</button>
+    //                             <button className="btn btn-secondary ml-2" onClick={this.clear}>Cancelar</button>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //             </form>
+    //         </div>
+    //     )
+    // }
 
     load(user:UserModel) {
         this.setState({ user })

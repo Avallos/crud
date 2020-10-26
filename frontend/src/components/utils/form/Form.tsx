@@ -2,11 +2,19 @@ import React from 'react'
 import {useForm} from 'react-hook-form'
 import UserModel from '../../../models/UserModel'
 import axios from 'axios'
+import swet from 'sweetalert2'
 
 function save(user:UserModel) {
 
     axios.post<UserModel>('http://localhost:3001/users', user).then(resp => {
-        alert(`Usuario ${resp.data.name} cadastrado com sucesso`)
+        swet.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Usuário Cadastrado com Sucesso',
+            showConfirmButton: false,
+            timer: 1000
+          })
+        
     })
 }
 
