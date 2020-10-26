@@ -1,0 +1,22 @@
+a.link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-weight: 300;
+    transition: background-color 0.5s linear;
+}
+
+a.link:hover{
+    background-color: #0a151b;
+    /* background: linear-gradient(to right, rgb(0, 90, 167), rgb(255, 253, 228)); */
+}
+
+@media(max-width: 768px){
+    a.link{
+        display: inline;
+        padding: 10px;
+        margin: 0px;
+        
+    }
+}

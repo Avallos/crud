@@ -1,0 +1,13 @@
+div.card{
+    width: 18rem;
+    min-height: 464px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+div.card:hover{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    transform: translateY(10px);
+}

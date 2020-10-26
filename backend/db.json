@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "name": "Douglas Avallos",
+      "email": "douglas.golf@hotmail.com",
+      "id": 1
+    },
+    {
+      "name": "Parmezão Da Quebrada",
+      "email": "douglas.golf@hotmail.com",
+      "id": 2
+    },
+    {
+      "name": "Mirlok do Grau",
+      "email": "mirlok@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Mirlok do Grau 2",
+      "email": "mirlok22@gmail.com",
+      "id": 4
+    }
+  ]
+}
