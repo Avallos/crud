@@ -6,20 +6,20 @@ import './App.css'
 import Logo from '../components/template/Logo'
 import Nav from '../components/template/Nav'
 import Footer from '../components/template/Footer'
-import {HashRouter} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 import Routes from './Routes'
 
 function App() {
     
     return (
-        <HashRouter>
+        <BrowserRouter>
             <div className="app">
                 <Logo/>
                 <Nav/>
                 <Routes />
                 <Footer/>
             </div>
-        </HashRouter>
+        </BrowserRouter>
         
     )
 }
